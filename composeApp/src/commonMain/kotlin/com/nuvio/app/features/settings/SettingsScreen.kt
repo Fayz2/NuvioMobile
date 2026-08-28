@@ -669,15 +669,6 @@ private fun MobileSettingsScreen(
 
             when (page) {
                 SettingsPage.Root -> {
-                    settingsSearchRootContent(
-                        query = settingsSearchQuery,
-                        entries = searchEntries,
-                        isTablet = false,
-                        showSearchField = rootSearchVisible,
-                        animateSearchField = rootSearchRevealAnimating,
-                        onQueryChange = { settingsSearchQuery = it },
-                        onTargetClick = { openSearchTarget(it) },
-                    )
                     if (settingsSearchQuery.isBlank()) {
                         settingsRootContent(
                             isTablet = false,
@@ -1085,15 +1076,6 @@ private fun TabletSettingsScreen(
                 }
                 when (page) {
                     SettingsPage.Root -> {
-                        settingsSearchRootContent(
-                            query = settingsSearchQuery,
-                            entries = searchEntries,
-                            isTablet = true,
-                            showSearchField = rootSearchVisible,
-                            animateSearchField = rootSearchRevealAnimating,
-                            onQueryChange = { settingsSearchQuery = it },
-                            onTargetClick = { openSearchTarget(it) },
-                        )
                         if (settingsSearchQuery.isBlank()) {
                             settingsRootContent(
                                 isTablet = true,
