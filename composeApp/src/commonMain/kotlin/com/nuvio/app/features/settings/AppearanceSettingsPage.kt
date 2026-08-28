@@ -273,7 +273,6 @@ internal fun LazyListScope.appearanceSettingsContent(
                 )
                 SettingsGroupDivider(isTablet = isTablet)
                 SettingsNavigationRow(
-                SettingsNavigationRow(
                     title = stringResource(Res.string.compose_settings_page_continue_watching),
                     description = stringResource(Res.string.settings_appearance_continue_watching_description),
                     isTablet = isTablet,
