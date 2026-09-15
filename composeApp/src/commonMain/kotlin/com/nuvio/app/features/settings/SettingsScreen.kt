@@ -662,7 +662,18 @@ private fun MobileSettingsScreen(
                 SettingsPage.Root -> {
                     settingsSearchRootContent(
                         query = settingsSearchQuery,
-                        entries = searchEntries,
+                        entries = {
+                            settingsSearchEntries(
+                                isTablet = false,
+                                pluginsEnabled = AppFeaturePolicy.pluginsEnabled,
+                                supportersContributorsPageEnabled = AppFeaturePolicy.supportersContributorsPageEnabled,
+                                accountDeletionEnabled = AppFeaturePolicy.accountDeletionEnabled,
+                                personalMediaAddonCopyEnabled = AppFeaturePolicy.personalMediaAddonCopyEnabled,
+                                liquidGlassNativeTabBarSupported = liquidGlassNativeTabBarSupported,
+                                switchProfileAvailable = onSwitchProfile != null,
+                                checkForUpdatesAvailable = onCheckForUpdatesClick != null,
+                            )
+                        },
                         isTablet = false,
                         showSearchField = rootSearchVisible,
                         animateSearchField = rootSearchRevealAnimating,
@@ -1072,7 +1083,18 @@ private fun TabletSettingsScreen(
                     SettingsPage.Root -> {
                         settingsSearchRootContent(
                             query = settingsSearchQuery,
-                            entries = searchEntries,
+                            entries = {
+                                settingsSearchEntries(
+                                    isTablet = true,
+                                    pluginsEnabled = AppFeaturePolicy.pluginsEnabled,
+                                    supportersContributorsPageEnabled = AppFeaturePolicy.supportersContributorsPageEnabled,
+                                    accountDeletionEnabled = AppFeaturePolicy.accountDeletionEnabled,
+                                    personalMediaAddonCopyEnabled = AppFeaturePolicy.personalMediaAddonCopyEnabled,
+                                    liquidGlassNativeTabBarSupported = liquidGlassNativeTabBarSupported,
+                                    switchProfileAvailable = onSwitchProfile != null,
+                                    checkForUpdatesAvailable = onCheckForUpdatesClick != null,
+                                )
+                            },
                             isTablet = true,
                             showSearchField = rootSearchVisible,
                             animateSearchField = rootSearchRevealAnimating,
