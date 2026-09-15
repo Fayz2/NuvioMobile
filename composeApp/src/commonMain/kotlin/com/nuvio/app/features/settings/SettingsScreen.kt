@@ -675,7 +675,7 @@ private fun MobileSettingsScreen(
                             )
                         },
                         isTablet = false,
-                        showSearchField = rootSearchVisible,
+                        showSearchField = false,
                         animateSearchField = rootSearchRevealAnimating,
                         onQueryChange = { settingsSearchQuery = it },
                         onTargetClick = { openSearchTarget(it) },
@@ -1096,7 +1096,7 @@ private fun TabletSettingsScreen(
                                 )
                             },
                             isTablet = true,
-                            showSearchField = rootSearchVisible,
+                            showSearchField = false,
                             animateSearchField = rootSearchRevealAnimating,
                             onQueryChange = { settingsSearchQuery = it },
                             onTargetClick = { openSearchTarget(it) },
